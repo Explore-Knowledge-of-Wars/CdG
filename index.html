@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crônica de Guerra - Quizzes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
+    <div class="settings-icon" onclick="toggleSettings()">
+        <i class="fas fa-cog"></i>
+        <div class="settings-dropdown" id="settingsDropdown">
+            <button onclick="toggleDarkMode()">Modo Escuro</button>
+            </div>
+    </div>
+
+    <header class="banner-section">
+        <h1>Crônica de Guerra</h1>
+    </header>
+
+    <main>
+        <section class="quizzes-section">
+            <h2>Quizzes</h2>
+            <div class="button-container">
+                <a href="https://wordwall.net/play/93158/375/337" target="_blank" class="quiz-button">Guerra de Canudos</a>
+                <a href="https://wordwall.net/play/93159/265/553" target="_blank" class="quiz-button">Guerra de Israel-Hamas</a>
+                <a href="https://wordwall.net/play/93702/498/619" target="_blank" class="quiz-button">Guerra do Vietnã</a>
+                <a href="https://wordwall.net/play/93720/193/690" target="_blank" class="quiz-button">Segunda Guerra Mundial</a>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Saiba Mais</h2>
+            <div class="content-wrapper">
+                <div class="content-card">
+                    <h3>Desenvolvimento do Jogo</h3>
+                    <p>O nosso jogo foi meticulosamente elaborado pela equipe <strong>E.K.W</strong>, utilizando a poderosa <strong>Game Maker Studio 2</strong>. Para o design visual em pixel art, contamos com a versatilidade da ferramenta online <strong>PixilArt</strong>, garantindo uma estética única e envolvente.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Videoaulas Educativas</h3>
+                    <p>Em nosso canal no YouTube, você encontrará uma série de vídeos educativos focados na disciplina de História. Nossas aulas abordam as principais guerras da humanidade, destacando seus eventos mais importantes e suas consequências, oferecendo um complemento valioso para seus estudos.</p>
+                </div>
+                <div class="content-card">
+                    <h3>Quizzes Interativos</h3>
+                    <p>Para otimizar o aprendizado, desenvolvemos quizzes interativos na plataforma Wordwall. Cada quiz é uma ferramenta dinâmica para testar seus conhecimentos sobre conflitos específicos, permitindo acompanhar seu desempenho através de rankings, tempo de resposta e contando com narrações por IA e imagens de apoio para facilitar a compreensão.</p>
+                Resume todos os quizzes acima, se possível adicionar um texto no meio do site que separe ele do saiba mais sobre e os quizzes com as seguintes frases "Desenvolva suas habilidades" "Nossos Quizzes são a maneira mais divertida de aprender e desafiar seus conhecimentos" "Jogue agora e seja o mestre da história!"
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action-section">
+            <div class="call-to-action-content">
+                <h2>Desenvolva suas habilidades!</h2>
+                <p>Nossos Quizzes são a maneira mais divertida de aprender e desafiar seus conhecimentos.</p>
+                <p>Jogue agora e seja o mestre da história!</p>
+            </div>
+        </section>
+
+
+        <section class="install-social-section">
+            <div class="button-group-center">
+                <a href="https://drive.google.com/drive/folders/1BCj304eTFAvEoUeAfoYManelre3yl6LQ?usp=sharing" target="_blank" class="main-action-button install-button">
+                    Instalar
+                </a>
+                <a href="https://linktr.ee/knowledgewar919" target="_blank" class="main-action-button social-button">
+                    Redes Sociais
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleSettings() {
+            document.getElementById('settingsDropdown').classList.toggle('show');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        }
+
+        // Fecha o dropdown se o usuário clicar fora dele
+        window.onclick = function(event) {
+            if (!event.target.matches('.fa-cog') && !event.target.matches('.settings-icon')) {
+                var dropdowns = document.getElementsByClassName("settings-dropdown");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
